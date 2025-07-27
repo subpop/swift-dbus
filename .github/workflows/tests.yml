@@ -36,13 +36,17 @@ jobs:
       run: swift test --parallel
       
     - name: Generate test report
-      if: always()
-      run: swift test --parallel --enable-code-coverage
-      
+      run: |
+        brew install llvm lcov
+        swift test --parallel --enable-code-coverage
+        mkdir -p .build/debug/codecov
+        llvm-cov export -format=lcov .build/debug/DBusPackageTests.xctest/Contents/MacOS/DBusPackageTests -instr-profile .build/debug/codecov/default.profdata > .build/debug/codecov/lcov_raw.info
+        # Filter out checkouts and other unwanted paths
+        lcov --remove .build/debug/codecov/lcov_raw.info '*/.build/*' '*/Tests/*' --output-file .build/debug/codecov/lcov.info
+        
     - name: Upload coverage to Coveralls
-      if: always()
       uses: coverallsapp/github-action@v2
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
-        path-to-lcov: .build/debug/codecov/lcov.info
+        file: .build/debug/codecov/lcov.info
         fail-on-error: false 
