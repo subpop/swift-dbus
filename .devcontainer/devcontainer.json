@@ -1,0 +1,35 @@
+{
+    "name": "Swift D-Bus Development",
+    "image": "swift:6.0",
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "sswg.swift-lang"
+            ],
+            // Set container specific settings.
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            }
+        }
+    },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+        "ghcr.io/devcontainers/features/github-cli:1": {}
+    },
+    // Use 'forwardPorts' to make a list of ports inside the container available locally.
+    "forwardPorts": [],
+    // Use 'postCreateCommand' to run commands after the container is created.
+    "postCreateCommand": "swift --version && swift package resolve",
+    // Configure tool-specific properties.
+    "remoteUser": "root",
+    // Set environment variables
+    "containerEnv": {
+        "SWIFT_VERSION": "6.0"
+    },
+    // Install additional packages
+    "postStartCommand": "apt-get update && apt-get install -y libdbus-1-dev pkg-config"
+}
