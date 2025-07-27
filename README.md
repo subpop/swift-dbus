@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/subpop/swift-dbus/badge.svg?branch=main)](https://coveralls.io/github/subpop/swift-dbus?branch=main)
+
 # Swift D-Bus Library
 
 A Swift library for working with D-Bus, providing both low-level wire protocol handling and high-level Swift integration through async/await and Codable support.
