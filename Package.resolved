@@ -1,5 +1,5 @@
 {
-  "originHash" : "8c07516b4e0c81a81f616e9f2b012b71460f0a9dd6bc3bc02bb18f2c44f84127",
+  "originHash" : "3dd8ae256bb002405a91f5244437551c80d04a8dcb4de20ca580426d2122a950",
   "pins" : [
     {
       "identity" : "minilexer",
@@ -51,8 +51,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-nio.git",
       "state" : {
-        "revision" : "34d486b01cd891297ac615e40d5999536a1e138d",
-        "version" : "2.83.0"
+        "revision" : "a5fea865badcb1c993c85b0f0e8d05a4bd2270fb",
+        "version" : "2.85.0"
       }
     },
     {
