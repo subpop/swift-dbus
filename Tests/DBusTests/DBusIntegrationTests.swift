@@ -26,25 +26,8 @@ struct DBusIntegrationTests {
 
     // MARK: - Test Environment Discovery
 
-    static let hasDBusSession: Bool = {
-        var result = false
-        let semaphore = DispatchSemaphore(value: 0)
-
-        Task { @MainActor in
-            do {
-                let connection = try await Connection.sessionBusConnection()
-                let hasSystemd1 = try await connection.nameHasOwner(
-                    name: "org.freedesktop.systemd1")
-                result = hasSystemd1 == true
-            } catch {
-                result = false
-            }
-            semaphore.signal()
-        }
-
-        semaphore.wait()
-        return result
-    }()
+    static let hasDBusSession: Bool =
+        ProcessInfo.processInfo.environment["DBUS_SESSION_BUS_ADDRESS"] != nil
 
     // MARK: - Connection Tests
 
