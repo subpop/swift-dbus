@@ -1,5 +1,5 @@
 {
-  "originHash" : "3dd8ae256bb002405a91f5244437551c80d04a8dcb4de20ca580426d2122a950",
+  "originHash" : "f121e3be269298efcf8f827b041cb449b005f26c056366e5de636c9a0f8d4a0c",
   "pins" : [
     {
       "identity" : "minilexer",
@@ -69,8 +69,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/CoreOffice/XMLCoder.git",
       "state" : {
-        "revision" : "b2b5d72345bab9e1938a483cf862b498aeed3796",
-        "version" : "0.18.1"
+        "revision" : "42f62383dbcd074440cb1f6a750b9c02df9e7325",
+        "version" : "0.18.2"
       }
     }
   ],
