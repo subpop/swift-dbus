@@ -1,5 +1,5 @@
 {
-  "originHash" : "3dd8ae256bb002405a91f5244437551c80d04a8dcb4de20ca580426d2122a950",
+  "originHash" : "f121e3be269298efcf8f827b041cb449b005f26c056366e5de636c9a0f8d4a0c",
   "pins" : [
     {
       "identity" : "minilexer",
@@ -42,8 +42,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apple/swift-log.git",
       "state" : {
-        "revision" : "5073617dac96330a486245e4c0179cb0a6fd2256",
-        "version" : "1.12.0"
+        "revision" : "2aed77ae5ec9a86d8fe42c12275e4c2653a286ee",
+        "version" : "1.13.1"
       }
     },
     {
